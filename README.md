@@ -7,7 +7,12 @@
 ### Local build
 
 ```
-docker build --no-cache -t cjlyth/java:oracle-java-8u31 .
+docker build --no-cache -t cjlyth/java:latest . \
+&& docker tag -f cjlyth/java:8 cjlyth/java:latest \
+&& docker tag -f cjlyth/java:jdk-8 cjlyth/java:latest \
+&& docker tag -f cjlyth/java:1.8 cjlyth/java:latest \
+&& docker tag -f cjlyth/java:jdk-1.8 cjlyth/java:latest \
+&& docker tag -f cjlyth/java:oracle-jdk-8u31 cjlyth/java:latest
 ```
 
 ### Run
